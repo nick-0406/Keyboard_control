@@ -1,31 +1,31 @@
-# 🔢 Lecture d’un Clavier Matriciel 4x4 avec Arduino
+# Lecture d’un Clavier Matriciel 4x4 avec Arduino
 
-## 📌 Description
+## Description
 
 Ce projet Arduino implémente la **lecture d’un clavier matriciel 4x4** sans utiliser de bibliothèque externe.  
 Le programme réalise un **scan manuel des lignes et des colonnes** pour identifier quelle touche est pressée.
 
 Le clavier peut être utilisé pour :
 
-- 🔐 **systèmes de contrôle d'accès**
-- 🧮 **interfaces de saisie numérique**
-- 🚪 **claviers de code (digicode)**
-- 🤖 **interfaces utilisateur pour projets embarqués**
+- **systèmes de contrôle d'accès**
+- **interfaces de saisie numérique**
+- **claviers de code (digicode)**
+- **interfaces utilisateur pour projets embarqués**
 
 Le code fonctionne en **balayant successivement les lignes du clavier** et en lisant l’état des colonnes afin d’identifier la touche appuyée.
 
 ---
 
-# ⚙️ Matériel utilisé
+# Matériel utilisé
 
-- 🟦 **Arduino (Uno / Nano / Mega)**
-- 🔢 **Clavier matriciel 4x4**
-- 🔌 Fils de connexion
-- 🔋 Alimentation Arduino
+- **Arduino (Uno / Nano / Mega)**
+- **Clavier matriciel 4x4**
+- Fils de connexion
+- Alimentation Arduino
 
 ---
 
-# 🔌 Connexions Arduino
+# Connexions Arduino
 
 ## Lignes du clavier
 
@@ -52,7 +52,7 @@ Les **colonnes sont configurées en `INPUT_PULLUP`**, ce qui signifie :
 
 ---
 
-# 🧠 Principe de fonctionnement
+# Principe de fonctionnement
 
 Le clavier est organisé en **4 lignes × 4 colonnes** :
 
@@ -68,16 +68,16 @@ Le programme utilise une méthode appelée **scan matriciel**.
 
 ### Étapes :
 
-1️⃣ Une ligne est mise à **LOW** (0V).  
-2️⃣ Les autres lignes sont maintenues à **HIGH (5V)**.  
-3️⃣ Les colonnes sont lues avec `digitalRead()`.  
-4️⃣ Si une colonne passe à **LOW**, cela signifie que la touche correspondante est pressée.
+Une ligne est mise à **LOW** (0V).  
+Les autres lignes sont maintenues à **HIGH (5V)**.  
+Les colonnes sont lues avec `digitalRead()`.  
+Si une colonne passe à **LOW**, cela signifie que la touche correspondante est pressée.
 
 Le processus est répété pour **chaque ligne du clavier**.
 
 ---
 
-# 📊 Correspondance des touches
+# Correspondance des touches
 
 | Ligne | Colonne | Touche |
 |------|--------|-------|
@@ -100,7 +100,7 @@ Le processus est répété pour **chaque ligne du clavier**.
 
 ---
 
-# 🔧 Fonction principale
+# Fonction principale
 
 Le code contient une fonction dédiée :
 
@@ -139,33 +139,33 @@ entrer un mot de passe
 
 contrôler un système
 
-💡 Exemple d’application
+Exemple d’application
 
 Ce module peut être utilisé pour créer :
 
-🔐 un digicode d’ouverture de porte
+un digicode d’ouverture de porte
 
-🚗 un système d'accès parking
+un système d'accès parking
 
-📟 un menu interactif Arduino
+un menu interactif Arduino
 
-🤖 une interface de commande robot
+une interface de commande robot
 
-🚀 Améliorations possibles
+Améliorations possibles
 
 Le projet peut être amélioré avec :
 
-⏱ anti-rebond logiciel (debounce)
+anti-rebond logiciel (debounce)
 
-📟 affichage LCD ou OLED
+affichage LCD ou OLED
 
-🔐 gestion de mot de passe
+gestion de mot de passe
 
-🔔 buzzer de confirmation
+buzzer de confirmation
 
-📡 connexion à un système IoT
+connexion à un système IoT
 
-👨‍💻 Auteur
+Auteur
 
 Projet réalisé par Nick
 
